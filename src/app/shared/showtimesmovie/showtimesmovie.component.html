@@ -1,0 +1,14 @@
+<div class="container">
+  <h4>Step 1: Select the time <i class="fas fa-clock"></i></h4>
+  <p class="text-center">Showtimes</p>
+  <div class="row">
+    <div class="col" *ngFor="let dateS of datesScheduler">
+       {{ dateS | date:'mediumDate'}}
+      <hr>
+      <div class="row" *ngFor="let scheduleD of scheduleDay">
+        <button type="button" class="btn btn-outline-primary btn-block" (click)="getShowTime(dateS, scheduleD.schedule)"><i class="fas fa-clock"></i>  {{scheduleD.schedule}}</button>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>

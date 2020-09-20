@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <app-movieview [idMovie]="id"></app-movieview>
+      <br>
+      <modal-Ticket *ngIf="showtime!=='' && placeRoom!==''" [movie]="title" [schedule]="showtime" [date]="showDate" [placeroom]="placeRoom" (cancelTicket)="cancelTicket($event)"></modal-Ticket>
+    </div>
+    <div class="col">
+      <div class="row" style="margin-top: 3%;">
+        <h2>Get your ticket in two easy steps <i class="fas fa-ticket-alt"></i></h2>
+      </div>
+      <small>**only one place per person</small>
+      <hr>
+      <div class="row">
+        <app-showtime (showtime)="getShowtime($event)"></app-showtime>
+      </div>
+      <hr>
+      <div class="row" *ngIf="showtime!==''">
+        <app-places (place)="sendTicket($event)"></app-places>
+      </div>
+    </div>
+  </div>
+</div>

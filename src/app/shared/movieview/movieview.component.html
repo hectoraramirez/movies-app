@@ -1,0 +1,27 @@
+<div class="card" *ngIf="movieDesc | async">
+  <img src="https://image.tmdb.org/t/p/original{{(movieDesc | async)?.poster_path}}" class="card-img-top"  alt="...">
+  <div class="card-body shadow bg-white rounded">
+    <h3 class="card-title">
+      <i class="fas fa-film"></i> {{(movieDesc | async)?.title}}
+    </h3>
+    <h6> <i class="fas fa-poll-h"></i> Overview </h6>
+    <p>
+      {{(movieDesc | async)?.overview}}
+    </p>
+    <div class="row row-cols-3">
+      <div class="col">
+        <i class="fas fa-heart"></i>
+        {{(movieDesc | async)?.popularity}}
+      </div>
+      <div class="col">
+        <i class="fas fa-language"></i>
+        {{(movieDesc | async)?.original_language | uppercase}}
+      </div>
+      <div class="col">
+        <i class="fas fa-star"></i>
+        {{(movieDesc | async)?.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+

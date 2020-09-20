@@ -1,0 +1,25 @@
+<h4>Step 2: Select the places <i class="fas fa-couch"></i></h4>
+  <table class="table">
+    <thead>
+      <tr scope="row">
+        <td colspan="3">
+          <i class="fas fa-tv"></i> Screen
+        </td>
+        <td colspan="3">
+          <i class="fas fa-tv"></i> Screen
+        </td>
+        <td colspan="2">
+          <i class="fas fa-tv"></i> Screen
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let plc of listPlaces">
+        <td *ngFor="let placeS of plc.arrayplace">
+          <button type="button" class="btn btn-primary btn-lg" (click)="getPlaces(placeS.place)"><i class="fas fa-couch"></i> {{placeS.place}}</button>
+          <hr>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+

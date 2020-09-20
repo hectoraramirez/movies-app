@@ -1,0 +1,18 @@
+/**
+Altura del sidenav
+*/
+.mat-drawer-container {
+  height: 1200px;
+}
+
+/** Ancho del elemento de los filtros */
+.mat-drawer {
+  padding: 3%;
+  width: 20%;
+}
+
+/** Ancho del elemento de catalogo */
+.mat-drawer-content {
+  width: 85%;
+}
+

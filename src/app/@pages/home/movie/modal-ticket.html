@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card" >
+      <div class="card-content">
+        <ul class="list-group">
+          <li class="list-group-item active">You have selected:</li>
+          <li class="list-group-item">Movie: {{movie}}</li>
+          <li class="list-group-item">Date: {{date | date:'mediumDate'}}</li>
+          <li class="list-group-item">Showtime {{schedule}}</li>
+          <li class="list-group-item">Place {{placeroom}}</li>
+        </ul>
+        <button type="button" class="btn btn-outline-primary btn-sm m-1" (click)="downloadTicket()"><i class="fas fa-ticket-alt"></i> Get my ticket</button>
+        <button type="button" class="btn btn-outline-primary btn-sm" (click)="cancelTicketClick()"><i class="fas fa-times"></i> No thanks</button>
+      </div>
+  </div>
+</div>
+
+
+
+
+
